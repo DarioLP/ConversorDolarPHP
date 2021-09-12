@@ -2,6 +2,11 @@
 
 <html>
 
+<head>
+<link href= "Style.css" rel="stylesheet" type = "text/css">
+</head>
+
+
 <title>
 Conversor de Dolar
 </title>
@@ -32,7 +37,7 @@ $dolar = $_GET["dolar"];
 
 
 ?>
-
+<center>
 <table>
   <thead>
     <tr>
@@ -60,7 +65,7 @@ $dolar = $_GET["dolar"];
   </tbody>
 
 </table>
-
+</center>
 </body>
 
 </html>
