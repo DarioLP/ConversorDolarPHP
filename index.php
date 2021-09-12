@@ -39,17 +39,17 @@ if($opciones == 0):
 elseif($opciones == 1):
   
   $eur = $dolar*0.84;
-  echo $dolar. " Dolar(es) es un total de: " .$eur. " Euros.";
+  echo $dolar. " Dolar(es) es un total de: " .$eur. " (Euros).";
 
 elseif($opciones == 2):
  
   $col = $dolar*624.32;
-  echo $dolar. " Dolar(es) es un total de: " .$col. " Colón Costarricense.";
+  echo $dolar. " Dolar(es) es un total de: " .$col. " (Colón Costarricense).";
 
 elseif($opciones == 3):
   
   $pesoMX = $dolar*19.95;
-  echo $dolar. " Dolar(es) es un total de: " .$pesoMX. " Pesos Mexicanos.";
+  echo $dolar. " Dolar(es) es un total de: " .$pesoMX. " (Pesos Mexicanos).";
 
 endif
 
