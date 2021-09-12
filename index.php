@@ -15,7 +15,7 @@ Conversor de Dolar
 
   <body>
 
-  <form>
+  <form name="formulario" method="post" action="index.php">
 
   <label>DOLAR:</label>
     <input type="text" id="dolar" name="dolar" value=0 /> 
@@ -27,18 +27,15 @@ Conversor de Dolar
 
 <?php
 
-$dolar = $_GET["dolar"];
+  $dolar = $_POST['dolar'];
   
   $eur = $dolar*0.84;
- 
   $col = $dolar*624.32;
-  
   $pesoMX = $dolar*19.95;
 
-
-?>
-<center>
-<table>
+  echo "
+  <center>
+  <table>
   <thead>
     <tr>
       <th>Moneda</th>
@@ -48,24 +45,27 @@ $dolar = $_GET["dolar"];
   <tbody>
     <tr>
       <td>Dólar</td>
-      <td> <?php echo $dolar ?> </td>
+      <td>" .$dolar."</td>
     </tr>
     <tr>
       <td>Euro</td>
-      <td> <?php echo $eur ?> </td>
+      <td>" .$eur. "</td>
     </tr>
     <tr>
       <td>Colón Costarricense</td>
-      <td> <?php echo $col ?> </td>
+      <td>" .$col. "</td>
     </tr>
     <tr>
       <td>Peso Mexicano</td>
-      <td> <?php echo $pesoMX ?> </td>
+      <td>" .$pesoMX. " </td>
     </tr>
   </tbody>
 
 </table>
-</center>
+</center>";
+
+?>
+
 </body>
 
 </html>
