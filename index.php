@@ -12,16 +12,8 @@ Conversor de Dolar
 
   <form>
 
-  <label>DOLAR:</label><br>
+  <label>DOLAR:</label>
     <input type="text" id="dolar" name="dolar" value=0 /> 
-    <label> Convertir a </label>
-
-    <select name="select" id="select">
-      <option value=0>Seleccione...</option>
-      <option value=1>Euro</option>
-      <option value=2>Colón Costarricense</option>
-      <option value=3>Peso Mexicano</option>
-    </select>
 
   <input type="submit" value="Convertir"/>
       
@@ -30,32 +22,45 @@ Conversor de Dolar
 
 <?php
 
-$opciones = $_GET["select"];
 $dolar = $_GET["dolar"];
-
-if($opciones == 0):
-  echo "Seleccione una conversión...";
-
-elseif($opciones == 1):
   
   $eur = $dolar*0.84;
-  echo $dolar. " Dolar(es) es un total de: " .$eur. " (Euros).";
-
-elseif($opciones == 2):
  
   $col = $dolar*624.32;
-  echo $dolar. " Dolar(es) es un total de: " .$col. " (Colón Costarricense).";
-
-elseif($opciones == 3):
   
   $pesoMX = $dolar*19.95;
-  echo $dolar. " Dolar(es) es un total de: " .$pesoMX. " (Pesos Mexicanos).";
 
-endif
 
 ?>
 
+<table>
+  <thead>
+    <tr>
+      <th>Moneda</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dólar</td>
+      <td> <?php echo $dolar ?> </td>
+    </tr>
+    <tr>
+      <td>Euro</td>
+      <td> <?php echo $eur ?> </td>
+    </tr>
+    <tr>
+      <td>Colón Costarricense</td>
+      <td> <?php echo $col ?> </td>
+    </tr>
+    <tr>
+      <td>Peso Mexicano</td>
+      <td> <?php echo $pesoMX ?> </td>
+    </tr>
+  </tbody>
 
-  </body>
+</table>
+
+</body>
 
 </html>
